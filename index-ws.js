@@ -21,7 +21,7 @@ wss.on('connection', function connection(ws) {
 
     console.log('clients connected: ', numClients);
 
-    wss.broadcast(`Current visitors: ${numClients}`);
+    wss.broadcast(`Current visitors are: ${numClients}`);
 
     if (ws.readyState === ws.OPEN) {
         ws.send('welcome!');
